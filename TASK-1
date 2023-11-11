@@ -1,0 +1,89 @@
+                                                 TASK-1
+1.write a blog for diffeence between HTTP vs HTTPS ?
+  HTTP (Hypertext Transfer Protocol) and HTTPS (Hypertext Transfer Protocol Secure) are both protocols used for
+   transmitting data over the internet, but they differ in terms of security.
+
+(1)Security:
+
+        .HTTP: It operates over a plain text communication, making it susceptible to eavesdropping and man-in-the-middle
+         attacks. The data transferred is not encrypted, exposing it to potential interception and tampering.
+        .HTTPS: It incorporates the SSL/TLS protocol, encrypting the data during transmission. This encryption provides a 
+        secure channel, making it much harder for attackers to intercept or manipulate the data.
+
+(2)Encryption:
+
+        .HTTP: Data is sent in plain text, which means it is readable by anyone who intercepts it during transit.
+        .HTTPS: Data is encrypted before transmission, ensuring that even if intercepted, it is challenging to decipher 
+        without the proper encryption key.
+
+(3)Authentication:
+
+         .HTTP: It does not provide any form of authentication, making it susceptible to attacks where the identity of the 
+         communicating parties is important.
+         .HTTPS: It uses digital certificates to authenticate the server, ensuring that users are connecting to the intended 
+         website and not a malicious one. This adds an extra layer of security.
+
+(4)Port:
+
+          .HTTP: Typically operates over port 80.
+          .HTTPS: Usually operates over port 443.
+
+(5)URL:
+
+           .HTTP: URLs begin with "http://".
+           .HTTPS: URLs begin with "https://".
+
+      In summary, while both HTTP and HTTPS facilitate the transfer of data on the internet, HTTPS adds a layer of security through encryption and authentication, 
+making it a preferred choice, especially for transmitting sensitive information such as personal data or payment details.
+
+2.write a blog about objects and its internal representation in javascripts?
+In JavaScript, objects are a fundamental data type used to store and organize data. They consist of key-value pairs, where keys are 
+strings (or symbols) and values can be of any data type, including other objects. The internal representation of objects involves properties, prototype chains, and methods.
+
+(1)Properties:
+
+ .Objects have properties, which are the key-value pairs.
+ .Properties can be accessed using dot notation (object.property) or bracket notation (object['property']).
+
+(2)Prototype Chain:
+
+  .Each object in JavaScript has a prototype (except for the base object, Object.prototype).
+  .Objects inherit properties and methods from their prototype.
+  .The prototype chain is a series of linked objects, leading to the base object.
+
+(3)Methods:
+
+  .Functions associated with objects are known as methods.
+  .Methods are invoked using dot notation 
+  (object.method()).
+  .Some methods are built-in, while others can be added to objects.
+
+Example:
+
+// Creating an object
+const person = {
+firstName: 'John',
+lastName: 'Doe',
+getFullName: function () {
+return `${this.firstName} ${this.lastName}`;
+}
+};
+
+// Accessing properties
+console.log(person.firstName); // Output: John
+
+// Accessing properties using bracket notation
+console.log(person['lastName']); // Output: Doe
+
+// Invoking a method
+console.log(person.getFullName()); // Output: John Doe
+
+// Prototype chain
+// person --> Object.prototype --> null (end of the chain)
+console.log(Object.getPrototypeOf(person)); // Output: Object.prototype
+
+         .Understanding the internal representation helps in working effectively with objects and utilizing features like prototypal inheritance.
+
+
+
+
